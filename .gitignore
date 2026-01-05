@@ -45,3 +45,4 @@ build/
 # --- Vercel ---
 .vercelKH/
 .vercel/
+dev.cmd
