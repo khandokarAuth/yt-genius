@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Theme: Deep Space */
+body {
+  /* 👇 selection ক্লাসগুলো @apply এর ভেতর ঢোকানো হয়েছে */
+  @apply bg-genius-base text-white font-sans antialiased selection:bg-genius-accent selection:text-black;
+  
+  /* Modern Mesh Gradient Background */
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.08), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(0, 220, 130, 0.08), transparent 25%);
+    
+  background-attachment: fixed; /* ব্যাকগ্রাউন্ড ফিক্সড থাকবে */
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-genius-accent/50;
+  }
+
+  /* Premium Glass Effect */
+  .glass {
+    @apply bg-[#0f172a]/70 backdrop-blur-xl border border-white/5;
+  }
+}
